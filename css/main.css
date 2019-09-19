@@ -20,13 +20,12 @@ body {
 
 .header {
     display: flex;
-    width: 95%; /*Se agrega width para separar el menu del borde de la pantalla*/
-    justify-content: space-between
+     justify-content: space-between;
+    margin-left: 5%;/*Se añade margen izquierdo para dejar espacio entre el logo y el borde de pantalla*/
+    margin-right: 5%;/*Se añade margen derecho para dejar espacio entre el menu y el borde de pantalla*/
+  
 }
 
-.header a{
-    margin-left: 5%;/*Se añade margen izquierdo para dejar espacio entre el logo y el borde de pantalla*/
-}
 
 .src-only {
     display: none;
@@ -44,8 +43,8 @@ p{
 }
 
 .logo {
-    width: 90px;
-    margin: 1em;
+    width: 80px;
+    margin: 2em 1em;
 }
 
 .options {
@@ -67,8 +66,8 @@ p{
 
 /* Big area */
 .big-hero img {
-    width: 100px;
-    margin-top: 2em; /*Se añade espacio para que la iamgen deje mas espacio*/
+    width: 150px;
+    margin-top: 2em; /*Se añade espacio para que la imagen de Nestor se separe mas del header*/
 }
 .big hero .container{
     margin-bottom: 5em;
@@ -83,8 +82,10 @@ p{
 }
 
 .big-hero p {
-    font-size: 1em;;
+    width: 90%;
+    font-size: 1em;
     color: #D7DEE6;
+    margin: 0 auto;
     margin-bottom: 0;/*Margen de 0 para que los logos de social suban un poco*/
 
 }
@@ -105,7 +106,7 @@ p{
     color: #D7DEE6;
     text-decoration: none;
     font-size: 2.5em;
-    margin: 0px 0.25em; /*Añadido margen izquierda y derecha para separar logos*/
+    margin: 0px 0.50em; /*Añadido margen izquierda y derecha para separar logos*/
 }
 
 .social-links li a i{ /*Añadido para cambiar tamaño de los logos*/
@@ -120,7 +121,10 @@ p{
 
 .post {
     padding: 1em;
-    margin-bottom: -2px;
+    margin: 0 auto;
+    margin-bottom: 2px;
+    
+    
 }
 .post h2 {
     text-transform: uppercase;
@@ -130,13 +134,25 @@ p{
 }
 
 .post ul {
-    list-style: none;
+    display: flex;/*Se agregar flex, y direccion column para centrar los articulos*/
+    flex-direction: column;
+    list-style: none; 
+    align-items: center;/*Alinear los items(la lista) al centro*/
+    margin: 0 auto;
+    margin-top: 2em;/*Margen entre h2 publicaciones y sus articulos*/
+    margin-bottom: 0;
+    
 }
 
-.post ul li {
+
+.post ul li {/*ofaidsajonfsolaknjbgdfknafj-------------------------------------*/
     min-height: 300px;
     max-width: 350px;
-    margin: 2rem auto;
+    padding:0 0;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    
 }
 
 .post ul li article {
@@ -155,7 +171,7 @@ p{
 
 .post article h3 {
     color: #0D5061;
-    margin-top: 2em;
+    margin-top: 1em; /*Margen reducido para que pegue con la imagen*/
     padding: 0em 1rem;
     font-size: 0.9em;
     white-space: nowrap;
@@ -167,7 +183,9 @@ p{
     color:#112935;
     font-size: 0.75em;
     padding: 1rem;
-    line-height: 25px;
+    line-height: 15px;
+    padding-bottom: 0;/*PAdding de 0 para reducir el espacio en blanco en cada articulo*/
+    
 }
 
 /* About */
@@ -184,15 +202,16 @@ p{
 }
 
 .bio-info img{
-   width: 200px;
+   width: 100px; /*Se reduce tamaño de la imagen(Logo A) de la seccion acerca*/
 }
 
 .bio-info p{
     font-size: 16px;
     padding: 2em;
     text-align: left;
-    line-height: 25px;
+    line-height: 20px;/*Cambio de espacio entre lineas*/
     letter-spacing: 2px;
+    margin:0 0.5em;/*Margen para centrar el parrafo*/
 }
 
 .contact {
@@ -200,9 +219,11 @@ p{
     flex-direction: column;
     text-align: left;
     padding: 0px 1em;
-    margin-bottom: 3em; /* se agrega un margen para la parte de abajo */
+    margin-bottom: 4em; /* se agrega un margen para la parte de abajo */
 }
-
+.contact label{
+    font-weight: bold;/*Cambiando el weight de los labels*/
+}
 .contact * + * {
     margin-top: 1.5em;
 }
@@ -210,6 +231,7 @@ p{
 .contact-form {
     display: flex;
     flex-direction: column;
+    margin: 0 auto;/*Se agrega margen al container de formulario*/
 }
 
 .contact-form input, .contact-form textarea{
