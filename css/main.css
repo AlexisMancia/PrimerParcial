@@ -20,7 +20,12 @@ body {
 
 .header {
     display: flex;
+    width: 95%; /*Se agrega width para separar el menu del borde de la pantalla*/
     justify-content: space-between
+}
+
+.header a{
+    margin-left: 5%;/*Se añade margen izquierdo para dejar espacio entre el logo y el borde de pantalla*/
 }
 
 .src-only {
@@ -31,9 +36,10 @@ body {
     display: none;
 }
 
+
 p{
     font-size: 0.75em;
-    padding: 1rem;
+    padding: 0;
     line-height: 25px;
 }
 
@@ -61,19 +67,25 @@ p{
 
 /* Big area */
 .big-hero img {
-    width: 150px;
+    width: 100px;
+    margin-top: 2em; /*Se añade espacio para que la iamgen deje mas espacio*/
 }
+.big hero .container{
+    margin-bottom: 5em;
+}
+
 
 .big-hero h2 {
     font-size: 1.875em;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: 0.002em;
-    margin-top: 1em ;
+    margin-top: 1.5em ;
 }
 
 .big-hero p {
-    font-size: 0.7em;;
+    font-size: 1em;;
     color: #D7DEE6;
+    margin-bottom: 0;/*Margen de 0 para que los logos de social suban un poco*/
 
 }
 
@@ -81,10 +93,11 @@ p{
 .social-links{
     list-style: none;
     padding: 0;
-    margin-top: 3em;
+    margin-top: 0;
+    margin-bottom: 5em; /* Separar la seccion de los logos de la seccion de color verde*/ 
     display: flex;
     flex-direction: row;
-    justify-content: center
+    justify-content: center;
 
 }
 
@@ -92,6 +105,11 @@ p{
     color: #D7DEE6;
     text-decoration: none;
     font-size: 2.5em;
+    margin: 0px 0.25em; /*Añadido margen izquierda y derecha para separar logos*/
+}
+
+.social-links li a i{ /*Añadido para cambiar tamaño de los logos*/
+    font-size: 2em;
 }
 
 
@@ -182,6 +200,7 @@ p{
     flex-direction: column;
     text-align: left;
     padding: 0px 1em;
+    margin-bottom: 3em; /* se agrega un margen para la parte de abajo */
 }
 
 .contact * + * {
