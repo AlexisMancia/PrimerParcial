@@ -20,7 +20,7 @@ body {
 
 .header {
     display: flex;
-     justify-content: space-between;
+    justify-content: space-between;
     margin-left: 5%;/*Se añade margen izquierdo para dejar espacio entre el logo y el borde de pantalla*/
     margin-right: 5%;/*Se añade margen derecho para dejar espacio entre el menu y el borde de pantalla*/
   
@@ -76,13 +76,13 @@ p{
 
 .big-hero h2 {
     font-size: 1.875em;
-    font-weight: 900;
+    font-weight: 900;/**/
     letter-spacing: 0.002em;
-    margin-top: 1.5em ;
+    margin-top: 1.5em ;/**/
 }
 
 .big-hero p {
-    width: 90%;
+    width: 90%;/**/
     font-size: 1em;
     color: #D7DEE6;
     margin: 0 auto;
@@ -306,11 +306,11 @@ footer .social-links {
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
   
-    .post ul {
+    .post ul {/*Se hace el container flex con propiedades wrap*/
         list-style: none;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: left;/*Hace que en el wrap cada elemento se justifique a la izquierda*/
     }
     
     .post ul li {
@@ -318,6 +318,11 @@ footer .social-links {
         max-height: 3500px;
         margin: 1rem 2rem;
         flex: 1 0 300px;
+    }
+
+    .post ul li article {/*Se crea esta seccion para darle un ancho fijo de 300px a cada articulo dentro del flex wrap*/
+        width: 300px;
+        
     }
 
 
@@ -342,6 +347,11 @@ footer .social-links {
         height:auto;
         display: flex;
         margin-top: 1em;
+    }
+
+    .menu li a{ /*Añadido tamaño de letra al menu y weight*/
+        font-size: 1.1em;
+        font-weight: 500;
     }
 
     .menu li a:hover{/*Añadido efecto hover para los tags "a" para color rojo*/
@@ -385,7 +395,7 @@ footer .social-links {
         margin-bottom: 0;
     }
 
-    /*TODO: FALTA CSS */
+    /*La forma del acerca y el formulario los deje de esa forma debido a que en una pantalla de tableta es mas facil su visualizacion, debido al poco tamaño de su pantalla*/
 } 
 
 @media only screen and (min-width: 1024px) {
@@ -398,6 +408,7 @@ footer .social-links {
 
 @media only screen and (min-width: 1440px) {
 
+    grid
     /*TODO: FALTA CSS */
     .container {
         width: 80%;
