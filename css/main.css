@@ -145,7 +145,7 @@ p{
 }
 
 
-.post ul li {/*ofaidsajonfsolaknjbgdfknafj-------------------------------------*/
+.post ul li {/**/
     min-height: 300px;
     max-width: 350px;
     padding:0 0;
@@ -231,7 +231,7 @@ p{
 .contact-form {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;/*Se agrega margen al container de formulario*/
+    margin: 0 1.5em;/*Se agrega margen al container de formulario*/
 }
 
 .contact-form input, .contact-form textarea{
@@ -301,6 +301,8 @@ footer .social-links {
     
 }
 
+
+
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
   
@@ -342,8 +344,46 @@ footer .social-links {
         margin-top: 1em;
     }
 
+    .menu li a:hover{/*Añadido efecto hover para los tags "a" para color rojo*/
+        color:red;
+    }
+
+    .social-links{/*Margen de distancia entre los iconos de social-links y la flecha*/
+        margin-bottom: 2em;
+    }
+
+    .hide-mobile .show-desktop{
+        margin-bottom: 0;
+    }
 
 
+    element.style {
+    }
+   
+
+    .fa-arrow-circle-down{ /*Cambiar tamaño del icono flecha, y su posicion usando margenes*/
+        color:#0AC693;/*Cambio de color para que sea igual al de seccion de publicaciones*/
+        font-size: 5em;
+        margin-bottom: 1em;
+    }
+
+    .post{
+        margin-bottom: 0;
+    }
+
+    .post ul{ /*Se cambia el ul a flex row, asi los articulos se mueven de la forma adecuada para una pantalla de ese tamaño(tablets)*/
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .post ul li {
+        min-height: 300px;
+        max-height: 3500px;
+        margin: 1rem 2rem;
+        flex: 1 0 300px;
+        margin-bottom: 0;
+    }
 
     /*TODO: FALTA CSS */
 } 
