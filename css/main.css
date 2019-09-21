@@ -123,8 +123,7 @@ p{
     padding: 1em;
     margin: 0 auto;
     margin-bottom: 2px;
-    
-    
+    width: 100%;
 }
 .post h2 {
     text-transform: uppercase;
@@ -164,12 +163,14 @@ p{
 }
 
 .post article img{
+    
     height: 150px;
     width: 100%;
     object-fit: cover;
 }
 
 .post article h3 {
+    max-width: 283px;
     color: #0D5061;
     margin-top: 1em; /*Margen reducido para que pegue con la imagen*/
     padding: 0em 1rem;
@@ -310,6 +311,7 @@ footer .social-links {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
+        margin-top:0; /*Se reduce el margen top usado en pantallas de moviles*/
         justify-content: left;/*Hace que en el wrap cada elemento se justifique a la izquierda*/
     }
     
@@ -350,7 +352,7 @@ footer .social-links {
     }
 
     .menu li a{ /*Añadido tamaño de letra al menu y weight*/
-        font-size: 1.1em;
+        font-size: 1em;
         font-weight: 500;
     }
 
@@ -366,18 +368,16 @@ footer .social-links {
         margin-bottom: 0;
     }
 
-
-    element.style {
-    }
-   
-
     .fa-arrow-circle-down{ /*Cambiar tamaño del icono flecha, y su posicion usando margenes*/
         color:#0AC693;/*Cambio de color para que sea igual al de seccion de publicaciones*/
         font-size: 5em;
         margin-bottom: 1em;
     }
 
-    .post{
+    .post{ /*el cointainer post se hace flex para manejo de sus elementos*/
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
         margin-bottom: 0;
     }
 
@@ -385,24 +385,79 @@ footer .social-links {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        padding-left: 1em;
+        margin-bottom: 2em;
+        justify-content: left;
+        align-items: center;
+        
     }
 
     .post ul li {
+        display: flex;
+        flex-direction: row;
         min-height: 300px;
         max-height: 3500px;
-        margin: 1rem 2rem;
-        flex: 1 0 300px;
+        margin: 2rem 0;
         margin-bottom: 0;
+        justify-content: center;
     }
 
+    .post ul li article{
+        width: 250px;
+    }
     /*La forma del acerca y el formulario los deje de esa forma debido a que en una pantalla de tableta es mas facil su visualizacion, debido al poco tamaño de su pantalla*/
 } 
 
 @media only screen and (min-width: 1024px) {
 
        /*TODO: FALTA CSS */
+    .header { /*Se modifica el header para crear margenes a ambos lados y que estos coincidan con los mostrados en el ejemplo*/
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0;
+        margin-left: 8%;
+        margin-right: 5%;
+    }
 
+    .logo {/*Modificacion de la posicion y tamaño del logo*/
+        width: 150px;
+        margin: 1.6em 0;
+    }
 
+    .menu{/*Se modifica el margen, para que el menu quede en una pocision como la del ejemplo*/
+        font-size: 1em;
+        margin-top: .8em;
+    }
+
+    .big-hero{/*Se cambia la altura del div big-hero para que sea como el ejemplo*/
+        margin-top: 2em; /*Margin 2 para bajar el big hero*/
+        height: 80vh;
+    }
+
+    .fa-arrow-circle-down{ /*Se remueve el margen de abajo del i (Flecha)*/
+        margin-bottom: 0em;
+    }
+
+    .post ul{ /*Se hace que el ul sea flex y se le da un margen*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;  /*Para dejar igual espacio entre cada articulo*/
+        align-content: center;
+        padding-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .post ul li{ /*Se les da margen a los elementos de la lista*/
+        margin: 1rem 0rem;
+        margin-bottom: 2em;
+    }
+
+    .post ul li article{ /*Se define el ancho de cada articulo*/
+        width: 250px;
+        margin: 0 0;
+        padding-right: 0em;
+    }
 
 }
 
