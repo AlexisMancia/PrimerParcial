@@ -35,16 +35,20 @@ body {
     display: none;
 }
 
+text{
+    font-family: 'Montserrat', sans-serif;
+}
 
-p{
+p{/*Modificacion de parrafos*/
     font-size: 0.75em;
     padding: 0;
     line-height: 25px;
 }
 
-.logo {
+.logo { /*Cambio de ancho y margenes del logo*/
     width: 80px;
     margin: 2em 1em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .options {
@@ -69,20 +73,20 @@ p{
     width: 150px;
     margin-top: 2em; /*Se añade espacio para que la imagen de Nestor se separe mas del header*/
 }
-.big hero .container{
+.big hero .container{/*Se da un margen bottom para que el big hero se espacie de la siguiente seccion*/
     margin-bottom: 5em;
 }
 
 
 .big-hero h2 {
     font-size: 1.875em;
-    font-weight: 900;/**/
+    font-weight: 900;/*Cambio del weight del titulo*/
     letter-spacing: 0.002em;
-    margin-top: 1.5em ;/**/
+    margin-top: 1.5em ;/*Se separa de la iamgen mediante un margen*/
 }
 
 .big-hero p {
-    width: 90%;/**/
+    width: 90%;/* Hace que la descripcion se mueva y se haga responsive, ademas le da un ancho del 90% del ancho de pantalla*/
     font-size: 1em;
     color: #D7DEE6;
     margin: 0 auto;
@@ -91,7 +95,7 @@ p{
 }
 
 /* Social links*/
-.social-links{
+.social-links{ /*Usado para darle formato a las imagenos de redes sociales*/
     list-style: none;
     padding: 0;
     margin-top: 0;
@@ -102,7 +106,7 @@ p{
 
 }
 
-.social-links li a{
+.social-links li a{ /* Modifica los tags a que estan dentro del dov social-links */
     color: #D7DEE6;
     text-decoration: none;
     font-size: 2.5em;
@@ -114,18 +118,18 @@ p{
 }
 
 
-.green-area {
+.green-area { /*Asiga color de fondo a la seccion de publicaciones*/
     background-color: #0AC693; 
 }
 
 
-.post {
+.post { /*Mover el post de posicion jugando con margenes y padding */
     padding: 1em;
     margin: 0 auto;
     margin-bottom: 2px;
     width: 100%;
 }
-.post h2 {
+.post h2 { /*Hacer el texto en mayusculas cambiarle tamaño y weight */
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.125em;
@@ -144,7 +148,7 @@ p{
 }
 
 
-.post ul li {/**/
+.post ul li {/*Darles un valor de altura maxima a la lista y centrar su contenido*/
     min-height: 300px;
     max-width: 350px;
     padding:0 0;
@@ -154,7 +158,7 @@ p{
     
 }
 
-.post ul li article {
+.post ul li article { /*Hacer su contorno redondeado y darle color  */
     overflow: hidden;
     border-radius: 10px;
     background-color: #ffffff;
@@ -162,14 +166,14 @@ p{
     padding-bottom: 2em;
 }
 
-.post article img{
+.post article img{/*darle tamaño a la imagen y hacerla cover para que se ajuste al espacio de cada articulo */
     
     height: 150px;
     width: 100%;
     object-fit: cover;
 }
 
-.post article h3 {
+.post article h3 { /*CAmbiar tamaño de los titulos de cada articulo y hacer que sean hidden */
     max-width: 283px;
     color: #0D5061;
     margin-top: 1em; /*Margen reducido para que pegue con la imagen*/
@@ -180,7 +184,7 @@ p{
     text-overflow: ellipsis;
 }
 
-.post article p {
+.post article p {/*Se le cambia el tamaño entre lineas al parrafo de cada articulo asi como su color*/
     color:#112935;
     font-size: 0.75em;
     padding: 1rem;
@@ -191,11 +195,11 @@ p{
 
 /* About */
 
-.about{
+.about{ /*Hacer que la seccion about baje al darle margen top*/
     margin-top: 2em;
 }
 
-.about h2 {
+.about h2 {/*Texto tranformado a mayusculas y se cambia su tamaño*/
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.125em;
@@ -215,7 +219,7 @@ p{
     margin:0 0.5em;/*Margen para centrar el parrafo*/
 }
 
-.contact {
+.contact { /*se hace flex el container de contacto*/
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -235,7 +239,7 @@ p{
     margin: 0 1.5em;/*Se agrega margen al container de formulario*/
 }
 
-.contact-form input, .contact-form textarea{
+.contact-form input, .contact-form textarea{ /*Se modifica el textarea cambiando sus propiedades*/
     padding: 1rem 2rem;
     border: none;
     border-radius: 0px 2em;
@@ -278,8 +282,8 @@ footer .social-links {
 
 footer
 
-.menu {
-    background-color: #112935;
+.menu { /*Se modifica el menu*/
+    background-color: #112935;/*Cambio de color de fondo*/
     position: absolute;
     z-index: 20;
     top: 60px;
@@ -318,7 +322,7 @@ footer
         justify-content: left;/*Hace que en el wrap cada elemento se justifique a la izquierda*/
     }
     
-    .post ul li {
+    .post ul li { /*Se le asigma altura maxima a la lista de articulos y se les da un margen*/
         min-height: 350px;
         max-height: 3500px;
         margin: 1rem 2rem;
@@ -331,7 +335,7 @@ footer
     }
 
 
-    .logo {
+    .logo { /*Modificacion del Logo*/
         width: 150px;
         margin: 1.5em;
     }
@@ -400,11 +404,10 @@ footer
         
     }
 
-    .post ul li {
+    .post ul li { /*Se modifica la lista de articulos y se pone en display flex para que tome la visualizacion deseada*/
         display: flex;
         flex-direction: row;
-        
-        margin: 2rem 0;
+        margin: 2rem 0; 
         margin-bottom: 0;
         justify-content: center;
     }
@@ -435,6 +438,11 @@ footer
         margin-top: .8em;
     }
 
+    .menu li a{/*Se cambia de tamaño las referencias dentro del menu*/
+        font-size: 1.15em;
+        font-weight: 500;
+    }
+
     .menu li a:hover{/*Añadido efecto hover para los tags "a" para color rojo*/
         color:red;
     }
@@ -452,7 +460,7 @@ footer
         margin-bottom: 0em;
     }
 
-    .post{
+    .post{ /* Se ajusta el tamaño del post*/
         height: 100%;
     }
 
@@ -536,6 +544,10 @@ footer
         padding-left: 0;
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .menu li a{/*Cambio d etamaño del menu para ajustarse a esta resolucion*/
+        font-size: 1.5em;
     }
 
     .menu li a:hover{/*Añadido efecto hover para los tags "a" para color rojo*/
