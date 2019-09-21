@@ -269,11 +269,14 @@ p{
 footer{
     background-color: #0D5061;
     color:#D7DEE6;
+    padding-bottom: 1em;/*Se le añade padding bottom para subir el nivel de los derechos de autor*/
 }
 
 footer .social-links {
     margin: 0;
 }
+
+footer
 
 .menu {
     background-color: #112935;
@@ -348,7 +351,12 @@ footer .social-links {
         width: auto;
         height:auto;
         display: flex;
-        margin-top: 1em;
+        margin-top: 0.8em;/*Modificacion de la altura del menu mediante margenes*/
+    }
+
+    .menu li{/*Dandole margin a los a del menu*/
+        margin-left: -0.2em;
+        margin-right: -0.2em;
     }
 
     .menu li a{ /*Añadido tamaño de letra al menu y weight*/
@@ -395,8 +403,7 @@ footer .social-links {
     .post ul li {
         display: flex;
         flex-direction: row;
-        min-height: 300px;
-        max-height: 3500px;
+        
         margin: 2rem 0;
         margin-bottom: 0;
         justify-content: center;
@@ -410,7 +417,6 @@ footer .social-links {
 
 @media only screen and (min-width: 1024px) {
 
-       /*TODO: FALTA CSS */
     .header { /*Se modifica el header para crear margenes a ambos lados y que estos coincidan con los mostrados en el ejemplo*/
         display: flex;
         justify-content: space-between;
@@ -429,13 +435,25 @@ footer .social-links {
         margin-top: .8em;
     }
 
+    .menu li a:hover{/*Añadido efecto hover para los tags "a" para color rojo*/
+        color:red;
+    }
+
     .big-hero{/*Se cambia la altura del div big-hero para que sea como el ejemplo*/
         margin-top: 2em; /*Margin 2 para bajar el big hero*/
         height: 80vh;
     }
 
+    .big-hero img{ /*Agrandado de tamaño de la imagen de Nestor*/
+        width: 200px;
+    }
+
     .fa-arrow-circle-down{ /*Se remueve el margen de abajo del i (Flecha)*/
         margin-bottom: 0em;
+    }
+
+    .post{
+        height: 100%;
     }
 
     .post ul{ /*Se hace que el ul sea flex y se le da un margen*/
@@ -459,15 +477,69 @@ footer .social-links {
         padding-right: 0em;
     }
 
+    .about .container{ /*Se crea el grid para la seccion about*/
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 1fr;
+        margin-top: -3em;/*Se manejan margenes para lograr la imagen deseada*/
+        margin-bottom: -2em;/*Se manejan margenes para lograr la imagen deseada*/
+    }
+    
+    .bio-info{ /*Se asigna lugar en el grid al div bio-info*/
+        height: 100%;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .bio-info img{ /*Se cambia el tamaño del Logo A*/
+        width: 175px;
+    }
+
+    .contact{ /*Se asigna lugar en el grid al div contact*/
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+   
+    .about h2{ /*Se asigna lugar en el grid al h2(subtitulo de la seccion)*/
+        grid-column: 1/3;
+        grid-row: 1/2; 
+    }
+
+    textarea{ /*Se reduce el tamaño del textarea*/
+        height: 150px;
+    }
+
+    .contact-form input[type=submit] { /*Se le cambia el ancho al boton contactar del formulario*/
+        width: 45%;
+    }
+
 }
 
 @media only screen and (min-width: 1440px) {
 
-    grid
-    /*TODO: FALTA CSS */
+    .header{ /*Se modifica el header*/
+        width: 95%;
+        margin-left: 2em;
+    }
+    
     .container {
-        width: 80%;
+        width: 90%; /*Se modifica el width para mover los bordes del header*/
         margin: 0 auto;
         max-width: 1440px;
     }
+    .post ul{ /*Se hace que el ul sea flex y se le da un margen*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;  /*Para dejar igual espacio entre cada articulo*/
+        align-content: center;
+        padding-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .menu li a:hover{/*Añadido efecto hover para los tags "a" para color rojo*/
+        color:red;
+    }
+
 }
